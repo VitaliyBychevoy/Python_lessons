@@ -1,0 +1,5 @@
+In Python you can create any objects.
+In Python you can make calculations.
+In Python you can get id object.
+In Python you can create strings.
+In Python you can compare strings.
