@@ -72,3 +72,31 @@ with open(file_name, 'w') as file_object:
             else:
                 file_object.write(f"{name.title()} likes programming because {answer.lower()}.\n")
 """
+
+"""
+print("\n\t 10.6 Сложение.")
+try:
+    first_number = int(input("Введите первое число:\n"))
+    second_number = int(input("Введите второе число:\n"))
+except ValueError:
+    print("You enter symbol instead number.")
+else:
+    result = first_number + second_number
+    print(f"{first_number} + {second_number} = {result}")
+"""
+"""
+print("\n\t 10.7 Калькулятор")
+while True:
+    try:
+        first_number = int(input("Введите первое число:\n"))
+        second_number = int(input("Введите второе число:\n"))
+    except ValueError:
+        print("You enter symbol instead number.")
+    else:
+        result = first_number + second_number
+        print(f"{first_number} + {second_number} = {result}")
+"""
+
+print("\n\t 10.8 Кошки и собаки")
+
+filename = ['cats.txt', 'dogs.txt']
