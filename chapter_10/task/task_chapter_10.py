@@ -96,7 +96,49 @@ while True:
         result = first_number + second_number
         print(f"{first_number} + {second_number} = {result}")
 """
-
+"""
 print("\n\t 10.8 Кошки и собаки")
 
 filename = ['cats.txt', 'dogs.txt']
+
+for file in filename:
+    try:
+        with open(file, encoding='utf-8') as f:
+            content = f.read()
+    except FileNotFoundError:
+        print(f"Sorry file {file} does not exist.")
+    else:
+        print(content)
+        print("***\n")
+"""
+
+"""
+print("\n\t 10.9 Ошибки без уведомления.")
+
+filename = ['cats.txt', 'dogs.txt']
+
+for file in filename:
+    try:
+        with open(file, encoding='utf-8') as f:
+            content = f.read()
+    except FileNotFoundError:
+        pass
+    else:
+        print(content)
+        print("***\n")
+"""
+
+"""
+print("\n\t 10.10 Частые слова.")
+
+filename = "Alice.txt"
+
+word = "the "
+word_counter = 0
+with open(filename, encoding='utf-8') as f:
+    lane = f.read()
+    word_caounter += lane.lower().count(word)
+
+print(f'In file {filename} is {word_counter} words "{word}".')
+"""
+
