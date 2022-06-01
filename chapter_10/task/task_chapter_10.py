@@ -137,8 +137,9 @@ word = "the "
 word_counter = 0
 with open(filename, encoding='utf-8') as f:
     lane = f.read()
-    word_caounter += lane.lower().count(word)
+    word_counter += lane.lower().count(word)
 
 print(f'In file {filename} is {word_counter} words "{word}".')
 """
+
 
