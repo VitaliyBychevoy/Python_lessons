@@ -39,7 +39,7 @@ def greet_user():
 
 greet_user()
 """
-
+"""
 def get_stored_username():
     filename = 'username.json'
     try:
@@ -68,3 +68,4 @@ def greet_user():
 
 
 greet_user()
+"""

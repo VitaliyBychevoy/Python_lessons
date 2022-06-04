@@ -1,3 +1,6 @@
+import json
+
+
 """
 print("\n\t 10.1 Изучение Python.")
 
@@ -19,6 +22,8 @@ with open("learning_python.txt") as file_object_2:
 for line in lines:
     print(line.rstrip())
 """
+import json
+
 """
 print("\n\t 10.2 Изучение C:")
 with open("learning_python.txt") as file_obj:
@@ -141,5 +146,66 @@ with open(filename, encoding='utf-8') as f:
 
 print(f'In file {filename} is {word_counter} words "{word}".')
 """
+"""
+print('\n\t 10.11 Любимое число.')
+
+favorite_number = input("Введите число:\n")
+
+file_name_number = 'my_favorite_number.json'
+with open(file_name_number, 'w') as f:
+    json.dump(favorite_number, f)
 
 
+with open(file_name_number) as f:
+    number = json.load(f)
+    print(f"Я знаю ваше любимое число. Это - {number} !")
+    
+"""
+
+print("\n\t 10.13 Проверка пользователя")
+
+def get_stored_username():
+    filename = 'username.json'
+    try:
+        with open(filename) as f:
+            username = json.load(f)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+
+
+def get_new_username( username=None ):
+    if username is None:
+        username = input("What is your name?")
+
+    filename = 'username.json'
+    with open(filename, 'w') as f:
+        json.dump(username, f)
+    return username
+
+def greet_user():
+    user_name = get_stored_username()
+    if user_name:
+        print(f"Welcome back, {user_name}")
+    else:
+        user_name = get_new_username()
+        print(f"We will remember you when you come back, {user_name}!")
+
+
+#greet_user()
+
+def start():
+
+    user_name = get_stored_username()
+    name = input("Hello. Enter your name:")
+    if name == user_name:
+        print("Имя не изменилось.")
+        #print(f"Welcome back, {name}")
+        greet_user()
+    else:
+        print("Имя изменилось.")
+        get_new_username(name)
+
+
+start()
