@@ -39,6 +39,7 @@ plt.title("Daily high and low temperature - 2018\nDeath Valley, CA", fontsize=24
 plt.xlabel('', fontsize=16)
 fig.autofmt_xdate() # show dates in diagonal way
 plt.ylabel('Temperature (F)', fontsize=16)
+ax.set_ylim(0, 130)
 plt.tick_params(axis='both', which='major', labelsize=16)
 
 plt.show()
